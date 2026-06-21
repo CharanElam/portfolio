@@ -683,11 +683,12 @@ footer {
   }
   .hamburger { display: flex; }
 
-  #hero-polished {
+  [data-hero="polished"] {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     gap: 2rem;
+    padding: 40px 1.25rem 60px;
   }
 
   .hero-cta, .hero-socials { justify-content: center; }
