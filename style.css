@@ -17,6 +17,17 @@
   --transition: 0.2s ease;
 }
 
+[data-theme="light"] {
+  --bg:        #ffffff;
+  --bg-card:   #f6f8fa;
+  --bg-nav:    #ffffffee;
+  --border:    #d0d7de;
+  --accent:    #0969da;
+  --accent2:   #1a7f37;
+  --text:      #1f2328;
+  --text-muted:#656d76;
+}
+
 /* ============================================================
    RESET & BASE
    ============================================================ */
@@ -30,6 +41,7 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
+  transition: background var(--transition), color var(--transition);
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -78,6 +90,22 @@ nav {
   color: var(--text);
   text-decoration: none;
 }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 5px 8px;
+  font-size: 1rem;
+  line-height: 1;
+  transition: color var(--transition), border-color var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
 .hamburger {
   display: none;
