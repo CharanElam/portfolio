@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charan Elam — Portfolio</title>
+  <meta name="description" content="Computer Information Systems student at UFV. Building things with code." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Phosphor — lightweight, tree-shakeable via CDN) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav>
+    <span class="nav-logo">charan.dev</span>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-greeting">// Hello, world 👋</p>
+        <h1 class="hero-name">Charan Elam</h1>
+        <p class="hero-title">Computer Information Systems Student</p>
+        <p class="hero-desc">
+          Studying at the University of the Fraser Valley. I build web apps,
+          explore data, and love turning ideas into things that actually work.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/CharanElam" target="_blank" rel="noopener" title="GitHub">
+            <i class="ph ph-github-logo"></i>
+          </a>
+          <a href="https://linkedin.com/in/" target="_blank" rel="noopener" title="LinkedIn">
+            <i class="ph ph-linkedin-logo"></i>
+          </a>
+          <a href="mailto:charan2k03@gmail.com" title="Email">
+            <i class="ph ph-envelope-simple"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section id="about">
+      <p class="section-label">// 01 — about</p>
+      <h2>About Me</h2>
+      <div class="divider"></div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Computer Information Systems undergrad at the
+            <strong>University of the Fraser Valley</strong> with a passion
+            for building clean, practical software. I enjoy working across
+            the stack — from designing interfaces to wiring up databases.
+          </p>
+          <p>
+            When I'm not coding I'm exploring new technologies, tinkering
+            with side projects, or leveling up my problem-solving skills
+            through competitive programming.
+          </p>
+          <p>
+            I'm actively looking for co-op and internship opportunities
+            where I can contribute, learn, and grow alongside a great team.
+          </p>
+          <a href="#" class="btn btn-outline" style="display:inline-flex;margin-top:0.5rem;">
+            <i class="ph ph-download-simple"></i>&nbsp;Download Resume
+          </a>
+        </div>
+
+        <div class="about-facts">
+          <div class="fact">
+            <span class="fact-label">Degree</span>
+            <span class="fact-value">BSc — Computer Information Systems</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">University</span>
+            <span class="fact-value">University of the Fraser Valley</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Location</span>
+            <span class="fact-value">British Columbia, Canada</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Status</span>
+            <span class="fact-value">Open to Internships</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Email</span>
+            <span class="fact-value">charan2k03@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS
+    ============================================================ -->
+    <section id="skills">
+      <p class="section-label">// 02 — skills</p>
+      <h2>Skills</h2>
+      <div class="divider"></div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <p class="skill-category">Languages</p>
+          <div class="skill-tags">
+            <!-- UPDATE: add/remove tags to match your real skills -->
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Java</span>
+            <span class="tag">SQL</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-category">Web & Frameworks</p>
+          <div class="skill-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">Flask</span>
+            <span class="tag">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-category">Databases & Cloud</p>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Firebase</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-category">Tools & Practices</p>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Agile</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS
+    ============================================================ -->
+    <section id="projects">
+      <p class="section-label">// 03 — projects</p>
+      <h2>Projects</h2>
+      <div class="divider"></div>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT CARD TEMPLATE — duplicate and fill in for each project -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">📁</span>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" title="GitHub repo">
+                <i class="ph ph-github-logo"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener" title="Live demo">
+                <i class="ph ph-arrow-square-out"></i>
+              </a>
+            </div>
+          </div>
+          <p class="project-name">Project Name</p>
+          <p class="project-desc">
+            A short description of what this project does and what problem it solves.
+            Two to three sentences is ideal.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">📁</span>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" title="GitHub repo">
+                <i class="ph ph-github-logo"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener" title="Live demo">
+                <i class="ph ph-arrow-square-out"></i>
+              </a>
+            </div>
+          </div>
+          <p class="project-name">Project Name</p>
+          <p class="project-desc">
+            A short description of what this project does and what problem it solves.
+            Two to three sentences is ideal.
+          </p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">📁</span>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" title="GitHub repo">
+                <i class="ph ph-github-logo"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener" title="Live demo">
+                <i class="ph ph-arrow-square-out"></i>
+              </a>
+            </div>
+          </div>
+          <p class="project-name">Project Name</p>
+          <p class="project-desc">
+            A short description of what this project does and what problem it solves.
+            Two to three sentences is ideal.
+          </p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section id="contact">
+      <p class="section-label">// 04 — contact</p>
+      <h2>Get in Touch</h2>
+      <div class="divider"></div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p>
+            Have a project idea, an internship opportunity, or just want to
+            chat about tech? My inbox is always open.
+          </p>
+
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:charan2k03@gmail.com">
+              <i class="ph ph-envelope-simple contact-link-icon"></i>
+              charan2k03@gmail.com
+            </a>
+            <a class="contact-link" href="https://github.com/CharanElam" target="_blank" rel="noopener">
+              <i class="ph ph-github-logo contact-link-icon"></i>
+              github.com/CharanElam
+            </a>
+            <a class="contact-link" href="https://linkedin.com/in/" target="_blank" rel="noopener">
+              <i class="ph ph-linkedin-logo contact-link-icon"></i>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Hi Charan, I wanted to reach out about…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
+            Send Message&nbsp;<i class="ph ph-paper-plane-tilt"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed &amp; built by Charan Elam &mdash; <span id="year"></span></p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>
