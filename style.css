@@ -167,6 +167,8 @@ h2 {
   min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
   padding: 80px 2rem;
   max-width: var(--max-w);
   margin: 0 auto;
@@ -176,7 +178,6 @@ h2 {
   position: relative;
   width: 260px;
   height: 320px;
-  margin-bottom: 2rem;
   flex-shrink: 0;
 }
 
@@ -493,6 +494,21 @@ footer {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 700px) {
+  #hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 60px;
+  }
+
+  .hero-cta, .hero-socials { justify-content: center; }
+
+  .hero-avatar {
+    width: 200px;
+    height: 250px;
+  }
+
   .nav-links {
     display: none;
     position: fixed;
