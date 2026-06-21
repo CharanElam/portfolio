@@ -457,7 +457,7 @@ main { padding-top: 60px; }
 
 .skill-category {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -469,9 +469,9 @@ main { padding-top: 60px; }
 .tag {
   background: var(--bg-subtle);
   color: var(--text-muted);
-  padding: 0.22rem 0.55rem;
+  padding: 0.25rem 0.65rem;
   border-radius: var(--radius-tag);
-  font-size: 0.775rem;
+  font-size: 0.875rem;
   border: 1px solid var(--border);
 }
 
