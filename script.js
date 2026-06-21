@@ -1,3 +1,10 @@
+// Show photo and hide placeholder when image loads successfully
+const heroPhoto = document.getElementById('heroPhoto');
+const heroPlaceholder = document.getElementById('heroPlaceholder');
+if (heroPhoto?.src) {
+  heroPhoto.addEventListener('load', () => { heroPlaceholder.style.display = 'none'; });
+}
+
 // Light/dark mode toggle
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon   = document.getElementById('themeIcon');
