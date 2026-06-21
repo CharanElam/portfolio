@@ -2,11 +2,12 @@
    LIGHT / DARK MODE
    ============================================================ */
 const themeToggle = document.getElementById('themeToggle');
-const themeIcon   = document.getElementById('themeIcon');
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  themeIcon.className = theme === 'light' ? 'ph ph-moon' : 'ph ph-sun';
+  // Re-query each time — Phosphor icons replaces <i> elements after load
+  const icon = themeToggle?.querySelector('i');
+  if (icon) icon.className = theme === 'light' ? 'ph ph-moon' : 'ph ph-sun';
   localStorage.setItem('theme', theme);
 }
 
