@@ -1,4 +1,24 @@
 /* ============================================================
+   LIGHT / DARK MODE
+   ============================================================ */
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon   = document.getElementById('themeIcon');
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  themeIcon.className = theme === 'light' ? 'ph ph-moon' : 'ph ph-sun';
+  localStorage.setItem('theme', theme);
+}
+
+const savedTheme  = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(savedTheme ?? (prefersDark ? 'dark' : 'light'));
+
+themeToggle?.addEventListener('click', () => {
+  applyTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+});
+
+/* ============================================================
    HERO VARIANT SWITCHER
    ============================================================ */
 const heroVariants = {

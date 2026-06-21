@@ -25,6 +25,24 @@
 }
 
 /* ============================================================
+   LIGHT MODE OVERRIDES
+   ============================================================ */
+[data-theme="light"] {
+  --bg:         #ffffff;
+  --bg-alt:     #f6f8fa;
+  --bg-card:    #f6f8fa;
+  --bg-subtle:  #eaeef2;
+  --border:     #d0d7de;
+  --border-sub: #d0d7de;
+  --accent:     #0969da;
+  --accent-h:   #1a7f9e;
+  --green:      #1a7f37;
+  --text:       #1f2328;
+  --text-bright:#1f2328;
+  --text-muted: #656d76;
+}
+
+/* ============================================================
    RESET & BASE
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,6 +54,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 a { color: var(--accent); text-decoration: none; }
 img { max-width: 100%; display: block; }
@@ -118,6 +137,22 @@ nav {
   align-items: center;
   gap: 0.75rem;
 }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-nav);
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 5px 8px;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
 .nav-resume {
   display: inline-flex;
