@@ -5,333 +5,471 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charan Elamparithi Kala</title>
   <meta name="description" content="Computer Information Systems student at UFV. Building things with code." />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
-
-  <!-- Icons (Phosphor — lightweight, tree-shakeable via CDN) -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ============================================================
+  <!-- ════════════════════════════════════════════════════════
        NAV
-  ============================================================ -->
+  ════════════════════════════════════════════════════════ -->
   <nav>
-    <span class="nav-logo">charan.dev</span>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div style="display:flex;align-items:center;gap:0.75rem;">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
-        <i class="ph ph-sun" id="themeIcon"></i>
-      </button>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="nav-inner">
+      <span class="nav-logo">charan.dev</span>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero"       data-nav="hero"       class="active">Home</a></li>
+        <li><a href="#about"      data-nav="about">About</a></li>
+        <li><a href="#skills"     data-nav="skills">Skills</a></li>
+        <li><a href="#experience" data-nav="experience">Experience</a></li>
+        <li><a href="#projects"   data-nav="projects">Projects</a></li>
+        <li><a href="#contact"    data-nav="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="Charan_Elamparithi_Kala_Resume_General_IT.pdf" target="_blank" class="nav-resume">resume.pdf</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <main>
 
-    <!-- ============================================================
-         HERO
-    ============================================================ -->
-    <section id="hero">
-      <div class="hero-content">
-        <p class="hero-greeting">// Hello, world 👋</p>
-        <h1 class="hero-name">Charan <br>Elamparithi Kala</h1>
-        <p class="hero-title">Bachelor of Computer Information Systems</p>
-        <p class="hero-desc">
+    <!-- ════════════════════════════════════════════════════════
+         HERO A — POLISHED (default)
+    ════════════════════════════════════════════════════════ -->
+    <section id="hero" data-section="hero" class="hero-section" data-hero="polished">
+      <div class="hero-text">
+        <p class="hero-greeting" data-hero-animate data-hero-delay="60">// Hello, world 👋</p>
+        <h1 class="hero-name" data-hero-animate data-hero-delay="160">
+          Charan<br />Elamparithi Kala
+        </h1>
+        <p class="hero-degree" data-hero-animate data-hero-delay="260">
+          Bachelor of Computer Information Systems
+        </p>
+        <p class="hero-desc" data-hero-animate data-hero-delay="360">
           Studying at the University of the Fraser Valley. I build web apps,
           explore data, and love turning ideas into things that actually work.
         </p>
-
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        <div class="hero-cta" data-hero-animate data-hero-delay="460">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact"  class="btn-outline">Get in Touch</a>
         </div>
-
-        <div class="hero-socials">
-          <a href="https://github.com/CharanElam" target="_blank" rel="noopener" title="GitHub">
+        <div class="hero-socials" data-hero-animate data-hero-delay="560">
+          <a href="https://github.com/CharanElam" target="_blank" rel="noopener" class="gh" title="GitHub">
             <i class="ph ph-github-logo"></i>
           </a>
-          <a href="https://www.linkedin.com/in/charan-elamparithi-kala" target="_blank" rel="noopener" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/charan-elamparithi-kala" target="_blank" rel="noopener" class="li" title="LinkedIn">
             <i class="ph ph-linkedin-logo"></i>
           </a>
-          <a href="mailto:charanelamparithikala@gmail.com" title="Email">
+          <a href="mailto:charanelamparithikala@gmail.com" class="em" title="Email">
             <i class="ph ph-envelope-simple"></i>
           </a>
         </div>
       </div>
 
-      <div class="hero-avatar">
-        <img src="charan_photo.jpg" alt="Charan Elamparithi Kala" id="heroPhoto" onerror="this.style.display='none'" />
-        <div class="hero-avatar-placeholder" id="heroPlaceholder">
-          <i class="ph ph-user"></i>
+      <div class="hero-avatar-wrap" data-hero-animate data-hero-delay="210">
+        <div class="hero-avatar-img">
+          <img src="charan_photo.jpg" alt="Charan Elamparithi Kala" />
+        </div>
+        <div class="hero-badge hero-badge-bottom">
+          <span style="color:#8b949e">// </span><span style="color:#3fb950">Open to internships</span>
+        </div>
+        <div class="hero-badge hero-badge-top">
+          <span style="color:#58a6ff">BSc</span><span style="color:#8b949e"> @ </span><span style="color:#e6edf3">UFV</span>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         ABOUT
-    ============================================================ -->
-    <section id="about">
-      <p class="section-label">// 01 — about</p>
-      <h2>About Me</h2>
-      <div class="divider"></div>
+    <!-- ════════════════════════════════════════════════════════
+         HERO B — TERMINAL
+    ════════════════════════════════════════════════════════ -->
+    <section data-section="hero" class="hero-section" id="hero-terminal" data-hero="terminal" hidden>
+      <div class="terminal-wrap">
+        <div class="terminal-window" data-hero-animate data-hero-delay="60">
+          <div class="terminal-bar">
+            <span class="term-dot" style="background:#ff5f57"></span>
+            <span class="term-dot" style="background:#febc2e"></span>
+            <span class="term-dot" style="background:#28c840"></span>
+            <span class="term-label">~/portfolio — bash</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <p class="term-line" style="margin:0;display:flex;align-items:center;gap:2px">
+              <span style="color:#58a6ff">$ </span>
+              <span class="term-cursor"></span>
+            </p>
+          </div>
+        </div>
+        <div class="terminal-below" data-hero-animate data-hero-delay="350">
+          <h1>Charan Elamparithi Kala</h1>
+          <p class="term-subtitle">BSc CIS · UFV · British Columbia, Canada</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact"  class="btn-outline">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm a Computer Information Systems undergrad at the
-            <strong>University of the Fraser Valley</strong> with a passion
-            for building clean, practical software. I enjoy working across
-            the stack — from designing interfaces to wiring up databases.
-          </p>
-          <p>
-            When I'm not coding I'm exploring new technologies, tinkering
-            with side projects, or leveling up my problem-solving skills
-            through competitive programming.
-          </p>
-          <p>
-            I'm actively looking for co-op and internship opportunities
-            where I can contribute, learn, and grow alongside a great team.
-          </p>
-          <a href="Charan_Elamparithi_Kala_Resume_General_IT.pdf" download class="btn btn-outline" style="display:inline-flex;margin-top:0.5rem;">
-            <i class="ph ph-download-simple"></i>&nbsp;Download Resume
+    <!-- ════════════════════════════════════════════════════════
+         HERO C — EDITORIAL
+    ════════════════════════════════════════════════════════ -->
+    <section data-section="hero" class="hero-section" id="hero-editorial" data-hero="editorial" hidden>
+      <p class="editorial-label" data-hero-animate data-hero-delay="60">
+        Computer Information Systems · University of the Fraser Valley
+      </p>
+      <h1 class="editorial-name-big" data-hero-animate data-hero-delay="140">CHARAN</h1>
+      <div class="editorial-row" data-hero-animate data-hero-delay="240">
+        <div class="editorial-photo">
+          <img src="charan_photo.jpg" alt="Charan Elamparithi Kala" />
+        </div>
+        <h2 class="editorial-surname">ELAMPARITHI<br />KALA</h2>
+      </div>
+      <div class="editorial-bottom" data-hero-animate data-hero-delay="360">
+        <p>Building web apps, exploring data, and turning ideas into things that actually work.</p>
+        <div class="editorial-actions">
+          <a href="https://github.com/CharanElam" target="_blank" rel="noopener" class="gh" title="GitHub">
+            <i class="ph ph-github-logo"></i>
           </a>
+          <a href="https://www.linkedin.com/in/charan-elamparithi-kala" target="_blank" rel="noopener" class="li" title="LinkedIn">
+            <i class="ph ph-linkedin-logo"></i>
+          </a>
+          <a href="#projects" class="btn-primary" style="margin-left:0.5rem">View Work</a>
+          <a href="#contact"  class="btn-outline">Contact</a>
         </div>
+      </div>
+    </section>
 
-        <div class="about-facts">
-          <div class="fact">
-            <span class="fact-label">Degree</span>
-            <span class="fact-value">BSc — Computer Information Systems</span>
+    <!-- ════════════════════════════════════════════════════════
+         ABOUT
+    ════════════════════════════════════════════════════════ -->
+    <section id="about" data-section="about">
+      <div class="section-inner">
+        <p class="section-label" data-animate>// 01 — about</p>
+        <h2 class="section-title" data-animate data-animate-delay="0.06s">About Me</h2>
+        <div class="section-divider" data-animate data-animate-delay="0.1s"></div>
+
+        <div class="about-grid" data-animate data-animate-delay="0.14s">
+          <div class="about-text">
+            <p>
+              I'm a Computer Information Systems undergrad at the
+              <strong>University of the Fraser Valley</strong> with a passion
+              for building clean, practical software. I enjoy working across
+              the stack — from designing interfaces to wiring up databases.
+            </p>
+            <p>
+              When I'm not coding I'm exploring new technologies, tinkering
+              with side projects, or leveling up my problem-solving skills
+              through competitive programming.
+            </p>
+            <p>
+              I'm actively looking for co-op and internship opportunities
+              where I can contribute, learn, and grow alongside a great team.
+            </p>
+            <a href="Charan_Elamparithi_Kala_Resume_General_IT.pdf" download class="btn-outline">
+              <i class="ph ph-download-simple"></i> Download Resume
+            </a>
           </div>
-          <div class="fact">
-            <span class="fact-label">University</span>
-            <span class="fact-value">University of the Fraser Valley</span>
-          </div>
-          <div class="fact">
-            <span class="fact-label">Location</span>
-            <span class="fact-value">British Columbia, Canada</span>
-          </div>
-          <div class="fact">
-            <span class="fact-label">Status</span>
-            <span class="fact-value">Open to Internships</span>
-          </div>
-          <div class="fact">
-            <span class="fact-label">Email</span>
-            <span class="fact-value">charanelamparithikala@gmail.com</span>
+
+          <div class="facts-card">
+            <div class="fact-row">
+              <span class="fact-label">Degree</span>
+              <span class="fact-value">BSc — Computer Info. Systems</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">University</span>
+              <span class="fact-value">University of the Fraser Valley</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Location</span>
+              <span class="fact-value">British Columbia, Canada</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Status</span>
+              <span class="fact-value green">
+                <span class="status-dot"></span>
+                Open to Internships
+              </span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-label">Email</span>
+              <span class="fact-value">
+                <a href="mailto:charanelamparithikala@gmail.com">charanelamparithikala@gmail.com</a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
+    <!-- ════════════════════════════════════════════════════════
          SKILLS
-    ============================================================ -->
-    <section id="skills">
-      <p class="section-label">// 02 — skills</p>
-      <h2>Skills</h2>
-      <div class="divider"></div>
+    ════════════════════════════════════════════════════════ -->
+    <section id="skills" data-section="skills" class="alt-bg-section">
+      <div class="section-inner alt-bg">
+        <div class="section-content">
+          <p class="section-label" data-animate>// 02 — skills</p>
+          <h2 class="section-title" data-animate data-animate-delay="0.06s">Skills</h2>
+          <div class="section-divider" data-animate data-animate-delay="0.1s"></div>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <p class="skill-category">Languages</p>
-          <div class="skill-tags">
-            <!-- UPDATE: add/remove tags to match your real skills -->
-            <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Java</span>
-            <span class="tag">SQL</span>
-            <span class="tag">HTML/CSS</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <p class="skill-category">Web & Frameworks</p>
-          <div class="skill-tags">
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Express</span>
-            <span class="tag">Flask</span>
-            <span class="tag">REST APIs</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <p class="skill-category">Databases & Cloud</p>
-          <div class="skill-tags">
-            <span class="tag">MySQL</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">Firebase</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <p class="skill-category">Tools & Practices</p>
-          <div class="skill-tags">
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">Agile</span>
-            <span class="tag">Linux</span>
+          <div class="skills-grid">
+            <div class="skill-card" data-animate data-animate-delay="0s">
+              <p class="skill-category">Languages</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Java</span>
+                <span class="tag">SQL</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
+            </div>
+            <div class="skill-card" data-animate data-animate-delay="0.06s">
+              <p class="skill-category">Web &amp; Frameworks</p>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">Flask</span>
+                <span class="tag">REST APIs</span>
+              </div>
+            </div>
+            <div class="skill-card" data-animate data-animate-delay="0.12s">
+              <p class="skill-category">Databases &amp; Cloud</p>
+              <div class="tags">
+                <span class="tag">MySQL</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Firebase</span>
+              </div>
+            </div>
+            <div class="skill-card" data-animate data-animate-delay="0.18s">
+              <p class="skill-category">Tools &amp; Practices</p>
+              <div class="tags">
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
+                <span class="tag">VS Code</span>
+                <span class="tag">Agile</span>
+                <span class="tag">Linux</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
+    <!-- ════════════════════════════════════════════════════════
+         EXPERIENCE & EDUCATION
+    ════════════════════════════════════════════════════════ -->
+    <section id="experience" data-section="experience">
+      <div class="section-inner">
+        <p class="section-label" data-animate>// 03 — experience</p>
+        <h2 class="section-title" data-animate data-animate-delay="0.06s">Experience &amp; Education</h2>
+        <div class="section-divider" data-animate data-animate-delay="0.1s"></div>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <!-- UFV -->
+          <div class="timeline-entry" data-animate data-animate-delay="0s">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <p class="timeline-title">University of the Fraser Valley</p>
+                  <p class="timeline-role">Bachelor of Computer Information Systems</p>
+                </div>
+                <span class="date-badge">2023 — Present</span>
+              </div>
+              <p class="timeline-body">
+                Studying computer science fundamentals, web development, databases, and software
+                engineering. Actively working on projects and building a strong technical foundation.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag-sm">Python</span>
+                <span class="tag-sm">Java</span>
+                <span class="tag-sm">Databases</span>
+                <span class="tag-sm">Algorithms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholder internship -->
+          <div class="timeline-entry" data-animate data-animate-delay="0.1s">
+            <div class="timeline-dot empty"></div>
+            <div class="timeline-card dashed">
+              <div class="timeline-header">
+                <div>
+                  <p class="timeline-title" style="color:#8b949e">Internship / Co-op</p>
+                  <p class="timeline-role muted">Software Development</p>
+                </div>
+                <span class="date-badge">Coming soon</span>
+              </div>
+              <p class="timeline-body italic">
+                Add your internship or co-op experience here — company, role, technologies,
+                and key accomplishments.
+              </p>
+            </div>
+          </div>
+
+          <!-- Personal projects -->
+          <div class="timeline-entry" data-animate data-animate-delay="0.2s">
+            <div class="timeline-dot green"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <p class="timeline-title">Personal Projects</p>
+                  <p class="timeline-role green">Independent Development</p>
+                </div>
+                <span class="date-badge">2022 — Present</span>
+              </div>
+              <p class="timeline-body">
+                Building web applications, exploring data science, and honing problem-solving skills
+                through competitive programming. Always experimenting with new technologies and
+                frameworks.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag-sm">React</span>
+                <span class="tag-sm">Node.js</span>
+                <span class="tag-sm">Python</span>
+                <span class="tag-sm">Flask</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
          PROJECTS
-    ============================================================ -->
-    <section id="projects">
-      <p class="section-label">// 03 — projects</p>
-      <h2>Projects</h2>
-      <div class="divider"></div>
+    ════════════════════════════════════════════════════════ -->
+    <section id="projects" data-section="projects" class="alt-bg-section">
+      <div class="section-inner alt-bg">
+        <div class="section-content">
+          <p class="section-label" data-animate>// 04 — projects</p>
+          <h2 class="section-title" data-animate data-animate-delay="0.06s">Projects</h2>
+          <div class="section-divider" data-animate data-animate-delay="0.1s"></div>
 
-      <div class="projects-grid">
+          <div class="projects-grid">
+            <div class="project-card" data-animate data-animate-delay="0s">
+              <div class="project-header">
+                <span class="project-icon">📁</span>
+                <div class="project-links">
+                  <a href="#" class="gh" title="GitHub"><i class="ph ph-github-logo"></i></a>
+                  <a href="#" class="ex" title="Live demo"><i class="ph ph-arrow-square-out"></i></a>
+                </div>
+              </div>
+              <p class="project-name">Project Name</p>
+              <p class="project-desc">A short description of what this project does and the problem it solves. Two to three sentences is ideal.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
 
-        <!-- PROJECT CARD TEMPLATE — duplicate and fill in for each project -->
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">📁</span>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener" title="GitHub repo">
-                <i class="ph ph-github-logo"></i>
-              </a>
-              <a href="#" target="_blank" rel="noopener" title="Live demo">
-                <i class="ph ph-arrow-square-out"></i>
-              </a>
+            <div class="project-card" data-animate data-animate-delay="0.07s">
+              <div class="project-header">
+                <span class="project-icon">📁</span>
+                <div class="project-links">
+                  <a href="#" class="gh" title="GitHub"><i class="ph ph-github-logo"></i></a>
+                  <a href="#" class="ex" title="Live demo"><i class="ph ph-arrow-square-out"></i></a>
+                </div>
+              </div>
+              <p class="project-name">Project Name</p>
+              <p class="project-desc">A short description of what this project does and the problem it solves. Two to three sentences is ideal.</p>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+              </div>
+            </div>
+
+            <div class="project-card" data-animate data-animate-delay="0.14s">
+              <div class="project-header">
+                <span class="project-icon">📁</span>
+                <div class="project-links">
+                  <a href="#" class="gh" title="GitHub"><i class="ph ph-github-logo"></i></a>
+                  <a href="#" class="ex" title="Live demo"><i class="ph ph-arrow-square-out"></i></a>
+                </div>
+              </div>
+              <p class="project-name">Project Name</p>
+              <p class="project-desc">A short description of what this project does and the problem it solves. Two to three sentences is ideal.</p>
+              <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
             </div>
           </div>
-          <p class="project-name">Project Name</p>
-          <p class="project-desc">
-            A short description of what this project does and what problem it solves.
-            Two to three sentences is ideal.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Flask</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
         </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">📁</span>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener" title="GitHub repo">
-                <i class="ph ph-github-logo"></i>
-              </a>
-              <a href="#" target="_blank" rel="noopener" title="Live demo">
-                <i class="ph ph-arrow-square-out"></i>
-              </a>
-            </div>
-          </div>
-          <p class="project-name">Project Name</p>
-          <p class="project-desc">
-            A short description of what this project does and what problem it solves.
-            Two to three sentences is ideal.
-          </p>
-          <div class="project-tags">
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">MongoDB</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">📁</span>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener" title="GitHub repo">
-                <i class="ph ph-github-logo"></i>
-              </a>
-              <a href="#" target="_blank" rel="noopener" title="Live demo">
-                <i class="ph ph-arrow-square-out"></i>
-              </a>
-            </div>
-          </div>
-          <p class="project-name">Project Name</p>
-          <p class="project-desc">
-            A short description of what this project does and what problem it solves.
-            Two to three sentences is ideal.
-          </p>
-          <div class="project-tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">HTML/CSS</span>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- ============================================================
+    <!-- ════════════════════════════════════════════════════════
          CONTACT
-    ============================================================ -->
-    <section id="contact">
-      <p class="section-label">// 04 — contact</p>
-      <h2>Get in Touch</h2>
-      <div class="divider"></div>
+    ════════════════════════════════════════════════════════ -->
+    <section id="contact" data-section="contact">
+      <div class="section-inner">
+        <p class="section-label" data-animate>// 05 — contact</p>
+        <h2 class="section-title" data-animate data-animate-delay="0.06s">Get in Touch</h2>
+        <div class="section-divider" data-animate data-animate-delay="0.1s"></div>
 
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <p>
-            Have a project idea, an internship opportunity, or just want to
-            chat about tech? My inbox is always open.
-          </p>
-
-          <div class="contact-links">
-            <a class="contact-link" href="mailto:charanelamparithikala@gmail.com">
-              <i class="ph ph-envelope-simple contact-link-icon"></i>
-              charanelamparithikala@gmail.com
-            </a>
-            <a class="contact-link" href="https://github.com/CharanElam" target="_blank" rel="noopener">
-              <i class="ph ph-github-logo contact-link-icon"></i>
-              github.com/CharanElam
-            </a>
-            <a class="contact-link" href="https://www.linkedin.com/in/charan-elamparithi-kala" target="_blank" rel="noopener">
-              <i class="ph ph-linkedin-logo contact-link-icon"></i>
-              linkedin.com/in/charan-elamparithi-kala
-            </a>
+        <div class="contact-grid" data-animate data-animate-delay="0.14s">
+          <div class="contact-info">
+            <p>Have a project idea, an internship opportunity, or just want to chat about tech? My inbox is always open.</p>
+            <div class="contact-links">
+              <a href="mailto:charanelamparithikala@gmail.com" class="contact-link em">
+                <i class="ph ph-envelope-simple"></i>
+                charanelamparithikala@gmail.com
+              </a>
+              <a href="https://github.com/CharanElam" target="_blank" rel="noopener" class="contact-link gh">
+                <i class="ph ph-github-logo"></i>
+                github.com/CharanElam
+              </a>
+              <a href="https://www.linkedin.com/in/charan-elamparithi-kala" target="_blank" rel="noopener" class="contact-link li">
+                <i class="ph ph-linkedin-logo"></i>
+                linkedin.com/in/charan-elamparithi-kala
+              </a>
+            </div>
           </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="cName">Name</label>
+              <input id="cName" type="text" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="cEmail">Email</label>
+              <input id="cEmail" type="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="cMsg">Message</label>
+              <textarea id="cMsg" placeholder="Hi Charan, I wanted to reach out about…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="align-self:flex-start">
+              Send Message <i class="ph ph-paper-plane-tilt"></i>
+            </button>
+          </form>
         </div>
-
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Jane Smith" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="jane@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Hi Charan, I wanted to reach out about…" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
-            Send Message&nbsp;<i class="ph ph-paper-plane-tilt"></i>
-          </button>
-        </form>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <p>Designed &amp; built by Charan Elam &mdash; <span id="year"></span></p>
+    <p>Designed &amp; built by Charan Elam — <span id="year"></span></p>
   </footer>
+
+  <!-- Hero variant switcher -->
+  <div class="hero-switcher" id="heroSwitcher">
+    <button data-variant="polished" class="active">A · Polished</button>
+    <button data-variant="terminal">B · Terminal</button>
+    <button data-variant="editorial">C · Editorial</button>
+  </div>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="script.js"></script>
