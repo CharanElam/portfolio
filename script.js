@@ -20,45 +20,10 @@ themeToggle?.addEventListener('click', () => {
 });
 
 /* ============================================================
-   HERO VARIANT SWITCHER
-   ============================================================ */
-const heroVariants = {
-  polished:  document.querySelector('[data-hero="polished"]'),
-  terminal:  document.querySelector('[data-hero="terminal"]'),
-  editorial: document.querySelector('[data-hero="editorial"]'),
-};
-
-let currentVariant = 'polished';
-let termTimers = [];
-
-function showVariant(name) {
-  Object.entries(heroVariants).forEach(([key, el]) => {
-    el.hidden = key !== name;
-  });
-
-  document.querySelectorAll('.hero-switcher button').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.variant === name);
-  });
-
-  currentVariant = name;
-  termTimers.forEach(clearTimeout);
-  termTimers = [];
-
-  runHeroEntrance();
-
-  if (name === 'terminal') startTerminal();
-}
-
-document.querySelectorAll('.hero-switcher button').forEach(btn => {
-  btn.addEventListener('click', () => showVariant(btn.dataset.variant));
-});
-
-/* ============================================================
    HERO ENTRANCE ANIMATIONS
    ============================================================ */
 function runHeroEntrance() {
-  const activeHero = heroVariants[currentVariant];
-  activeHero.querySelectorAll('[data-hero-animate]').forEach(el => {
+  document.querySelectorAll('[data-hero-animate]').forEach(el => {
     const delay = parseInt(el.dataset.heroDelay || '0', 10);
     el.style.opacity = '0';
     el.style.transform = 'translateY(22px)';
@@ -67,59 +32,6 @@ function runHeroEntrance() {
       el.style.opacity = '1';
       el.style.transform = 'translateY(0)';
     }, delay + 60);
-  });
-}
-
-/* ============================================================
-   TERMINAL TYPING (Variant B)
-   ============================================================ */
-const termLines = [
-  { text: 'whoami',                                         isCmd: true  },
-  { text: 'charan-elamparithi-kala',                        isCmd: false },
-  { text: 'cat role.txt',                                   isCmd: true  },
-  { text: 'BSc CIS student @ UFV · British Columbia, CA',   isCmd: false },
-  { text: 'echo $STATUS',                                   isCmd: true  },
-  { text: 'Open to internships & co-op opportunities ✓',    isCmd: false },
-];
-
-const termDelays = [300, 900, 1600, 2300, 3200, 3900];
-
-function startTerminal() {
-  const body = document.getElementById('terminalBody');
-  if (!body) return;
-
-  // Reset — keep only the cursor line
-  body.innerHTML = `
-    <p style="margin:0;display:flex;align-items:center;gap:2px">
-      <span style="color:#58a6ff">$ </span>
-      <span class="term-cursor"></span>
-    </p>`;
-
-  termLines.forEach((line, i) => {
-    const t = setTimeout(() => {
-      const cursor = body.querySelector('.term-cursor')?.closest('p');
-      if (cursor) cursor.remove();
-
-      const p = document.createElement('p');
-      p.className = 'term-line';
-      p.style.margin = '0';
-      p.style.animation = 'termLine 0.25s ease both';
-
-      if (line.isCmd) {
-        p.innerHTML = `<span style="color:#58a6ff">$ </span><span style="color:#e6edf3">${line.text}</span>`;
-      } else {
-        p.innerHTML = `<span style="color:#3fb950">${line.text}</span>`;
-      }
-      body.appendChild(p);
-
-      // Re-add cursor after last output line
-      const cursorLine = document.createElement('p');
-      cursorLine.style.cssText = 'margin:0;display:flex;align-items:center;gap:2px';
-      cursorLine.innerHTML = `<span style="color:#58a6ff">$ </span><span class="term-cursor"></span>`;
-      body.appendChild(cursorLine);
-    }, termDelays[i]);
-
-    termTimers.push(t);
   });
 }
 
