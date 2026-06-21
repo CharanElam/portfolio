@@ -39,5 +39,5 @@ form?.addEventListener('submit', (e) => {
   const message = form.querySelector('#message').value;
   const subject = encodeURIComponent(`Portfolio contact from ${name}`);
   const body    = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
-  window.location.href = `mailto:charan2k03@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:charanilampradikala@gmail.com?subject=${subject}&body=${body}`;
 });
